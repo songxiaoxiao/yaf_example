@@ -14,7 +14,17 @@ class Bootstrap extends Yaf\Bootstrap_Abstract{
 		$arrConfig = Yaf\Application::app()->getConfig();
 		Yaf\Registry::set('config', $arrConfig);
 	}
-
+	/**
+	 * 导入所需文件
+	 */
+	public function _initDatebase(){
+//		Yaf\Loader::import(APPLICATION_PATH . '/library/function.php');      //系统全局方法
+//		Yaf\Loader::import(APPLICATION_PATH . '/library/Tools.php');         //工具类
+//		Yaf\Loader::import(APPLICATION_PATH . '/library/Validate.php');      //验证方法
+//		Yaf\Loader::import(APPLICATION_PATH . '/library/Log.php');           //日志类
+//		Yaf\Loader::import(APPLICATION_PATH . '/library/Adapter.php');       //Smarty适配器，使Smarty与Yaf之间能进行适配
+//		Yaf\Loader::import(APPLICATION_PATH . '/library/Service.php');       //系统service类，所有Service都继承该类
+	}
 	public function _initPlugin(Yaf\Dispatcher $dispatcher) {
 		//注册一个插件
 		$objSamplePlugin = new SamplePlugin();
